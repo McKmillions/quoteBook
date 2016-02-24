@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>quoteBook</title>
+	<link rel="stylesheet" type="text/css" href="./app/styles/styles.css">
+</head>
+<body ng-app="quoteBook">
+
+	<div class="container" ng-controller="mainCtrl">
+		
+		<div class="new-quote">
+			<form ng-submit="addData()">
+				<input type="text" ng-model="quote.text" class="textBox" placeholder="Input New Quote">
+				<input type="text" ng-model="quote.author" class="textBox" placeholder="Input New Author">
+				<input type="submit" />
+			</form>
+		</div>
+
+        <div class="filters">
+          <input type="textbox" name="name" value="Search Quotes" ng-model="searchby.text" placeholder="Search Quotes">
+          <input type="textbox" name="name" value="Search Authors" ng-model="searchby.author" placeholder="Search Authors">
+          <button ng-click="changeFilter()">Filter Quotes</button>
+        </div>
+
+		<h1>Book Quotes:</h1>
+		<div class="book-quote">
+			<ul ng-repeat="quote in quotes | filter: searchby track by $index" class="quotes">
+				<li class="quote">
+				{{quote.text}} ~ {{quote.author}} <button class="remove-button" ng-click="removeData(quote)"> Delete</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script type="text/javascript" src="./app/js/app.js"></script>
+	<script type="text/javascript" src="./app/js/dataService.js"></script>
+	<script type="text/javascript" src="./app/js/mainCtrl.js"></script>
+</body>
+</html>

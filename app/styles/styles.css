@@ -1,0 +1,58 @@
+body{
+  margin: 0px;
+  font-family: Helvetica;
+}
+
+/*h1 {
+	margin-left: 40px;
+}*/
+
+/*.new-quote, .filters {
+	background-color: red;
+	padding-bottom: 10px;
+}*/
+
+.container {
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
+.quote {
+}
+
+.book-quotes, .quote {
+  width: 90%;
+  /*margin-left: 2px;*/
+  background-color: #e8e8e8;
+  /*border-radius: 10px;*/
+  padding: 10px;
+  display: flex;
+  line-height: 28px;
+  position: relative;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.remove-button {
+  /*flex-grow: 1;*/
+  height: 100%;
+  /*float: right;*/
+  position: absolute;
+  text-align: center;
+  font-size: .6em;
+  color: white;
+  right: 0px;
+  background-color: black;
+  /*border-radius-: 10px;*/
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /*height: 10px;*/
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: -40px;
+  cursor: pointer;
+  line-height: 4px;
+}
+
+.remove-button:hover {
+	background-color: red;
+}
